@@ -2,6 +2,8 @@ language: scala
 scala:
   - 2.10.0
 script:
+  - "echo '-------------------------------------------------'"
+  - "echo $TRAVIS_SCALA_VERSION"
   - "sbt -Duser.name=$USER.$RANDOM ++$TRAVIS_SCALA_VERSION assembly"
   - "scripts/test_tutorials.sh"
 jdk:
